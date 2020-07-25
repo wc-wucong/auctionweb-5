@@ -17,6 +17,7 @@ public class Auctionweb5Application {
 		System.out.println("第3次提交");
 		System.out.println("第4次提交");
 		System.out.println("第5次提交");
+		System.out.println("第6次提交");
 	}
 
 }
