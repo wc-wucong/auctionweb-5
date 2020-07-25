@@ -1,4 +1,4 @@
-package com.accp;
+package com.accp;3
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,6 +10,7 @@ public class Auctionweb5Application {
 		SpringApplication.run(Auctionweb5Application.class, args);
 		System.out.println("第1次提交");
 		System.out.println("第二次提交");
+		System.out.println("第3次提交");
 	}
 
 }
