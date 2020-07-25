@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accp.dao.AddressObjMapper" >
+  <resultMap id="BaseResultMap" type="com.accp.pojo.AddressObj" >
+    <result column="apid" property="apid" jdbcType="INTEGER" />
+    <result column="aname" property="aname" jdbcType="VARCHAR" />
+    <result column="atel" property="atel" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.accp.pojo.AddressObj" >
+    insert into tbl_address (apid, aname, atel
+      )
+    values (#{apid,jdbcType=INTEGER}, #{aname,jdbcType=VARCHAR}, #{atel,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.accp.pojo.AddressObj" >
+    insert into tbl_address
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="apid != null" >
+        apid,
+      </if>
+      <if test="aname != null" >
+        aname,
+      </if>
+      <if test="atel != null" >
+        atel,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="apid != null" >
+        #{apid,jdbcType=INTEGER},
+      </if>
+      <if test="aname != null" >
+        #{aname,jdbcType=VARCHAR},
+      </if>
+      <if test="atel != null" >
+        #{atel,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
